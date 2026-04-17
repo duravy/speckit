@@ -1,0 +1,59 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\""
+      }]
+    }],
+    "PreToolUse": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\"",
+        "async": true
+      }]
+    }],
+    "PostToolUse": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\"",
+        "async": true
+      }]
+    }],
+    "PostToolUseFailure": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\"",
+        "async": true
+      }]
+    }],
+    "Stop": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\"",
+        "async": true
+      }]
+    }],
+    "SubagentStart": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\"",
+        "async": true
+      }]
+    }],
+    "SubagentStop": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\otel-dispatch.js\"",
+        "async": true
+      }]
+    }]
+  }
+}
